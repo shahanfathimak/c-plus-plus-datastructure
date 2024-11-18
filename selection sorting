@@ -1,0 +1,25 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int main() {
+    int a[5]={11,12,10,9,15};
+
+    for( int i=0;i<4;i++){
+        int min=i;
+         for(int j=i+1;j<5;j++){
+             if(a[j]<a[min]){
+               
+            min=j;
+             }
+         }
+      if(i!=min){
+         int n=a[min];
+         a[min]=a[i];
+         a[i]=n;
+      }   
+    }
+for( int i=0;i<5;i++){
+    cout<<a[i]<<",";
+}
+    return 0;
+}
